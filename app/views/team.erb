@@ -1,3 +1,11 @@
-#view competed form
 <h1><%= @team_name %></h1>
 <h2>Team Motto: <%= @team_motto %></h2>
+
+<h1>Ships</h1>
+<% @heroes.each do |hero| %>
+  <div class="hero">
+    <p>Name: <%= hero.name %></p><br>
+    <p>Power: <%= hero.type %></p><br>
+    <p>Bio: <%= hero.booty %></p>
+  </div><br>
+<% end %>
