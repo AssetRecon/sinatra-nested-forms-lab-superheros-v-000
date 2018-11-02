@@ -13,10 +13,14 @@ class App < Sinatra::Base
       @team_name = team.name
       @team_motto = team.motto
 
-      hero = Hero.new(params[:hero])
-
-      erb :team
+      @hero = Hero.new(params[:hero])
+      params[:team][:heros].each do |details|
+        Hero.new(details)
+      end
+      @heros = Hero.all
+      erb :'pirates/show'
     end
+
 
 
 end
