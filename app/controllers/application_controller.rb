@@ -12,8 +12,8 @@ class App < Sinatra::Base
       @team = Team.new(params[:team])
       @team_name = @team.name
 
-      erb :team
 
+      erb :team
     end
 
 
