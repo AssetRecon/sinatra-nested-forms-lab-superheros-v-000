@@ -13,6 +13,7 @@ class App < Sinatra::Base
       @team_name = team.name
       @team_motto = team.motto
 
+      hero = Hero.new(params[:hero])
 
       erb :team
     end
